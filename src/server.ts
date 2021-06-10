@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
+import path from "path";
 
 const PORT = process.env.PORT || 3001;
 
@@ -12,4 +13,7 @@ app.use(express.static("dist/app"));
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
+});
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(__dirname, "app/index.html"));
 });
