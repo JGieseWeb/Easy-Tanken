@@ -1,3 +1,20 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  /* COLORS */
+  --primary-color: #343a53;
+  --secondary--color: #2a2828;
+  --navbar-icon-color: #b0abae;
+  --text-color: #d6d1d1;
+  --background-color: #242222;
+  --first-prize-field-color: #1a3423;
+  --other-prize-field-color: #341a1c;
+  --first-prize-spacebar-color: #1da033;
+  --second-prize-spacebar-color: #a01d1d;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
