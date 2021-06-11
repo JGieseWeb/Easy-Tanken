@@ -3,7 +3,6 @@ import React from "react";
 export default function BurgerMenuIcon(): JSX.Element {
   return (
     <svg
-      id="Menu"
       xmlns="http://www.w3.org/2000/svg"
       width="42"
       height="37"
