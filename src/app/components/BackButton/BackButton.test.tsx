@@ -1,5 +1,6 @@
 import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import BackButton from "./BackButton";
 
 test("renders Start Button", () => {
@@ -13,7 +14,7 @@ test("calls onClick", () => {
   const handleClick = jest.fn();
   render(<BackButton onClick={handleClick}></BackButton>);
 
-  fireEvent.click(screen.getByRole("button"));
+  userEvent.click(screen.getByRole("button"));
 
   expect(handleClick).toBeCalled();
 });
