@@ -1,0 +1,10 @@
+.prizeField {
+  border: none;
+  background-color: var(--first-prize-field-color);
+  height: 2em;
+  width: 3.5em;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  color: var(--text-color);
+}
