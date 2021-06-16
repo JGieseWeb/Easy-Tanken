@@ -1,3 +1,29 @@
 .navBar {
   margin: 0;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.topNavBar {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+}
+.topNavBar :last-child {
+  grid-area: 1/1/1/3;
+  place-self: center;
+}
+.topNavBar :first-child {
+  grid-area: 1/1/1/2;
+}
+.botNavBar {
+  display: grid;
+  grid-auto-flow: column;
+}
+.text {
+  display: grid;
+  align-items: center;
+  place-content: center;
+  color: antiquewhite;
+  font-size: 1.5em;
 }
