@@ -1,21 +1,41 @@
 .Primary {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: left;
+}
+
+.Primary__prize {
   border: none;
   background-color: var(--first-prize-field-color);
-  height: 2em;
-  width: 3.5em;
   display: grid;
   align-content: center;
   place-items: center;
   color: var(--text-color);
+  width: 7.8em;
+  height: 5.4em;
+}
+
+.Primary__bar {
+  width: 1.8em;
+  background-color: var(--first-prize-spacebar-color);
 }
 
 .Secondary {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: left;
+}
+.Secondary__prize {
   border: none;
   background-color: var(--other-prize-field-color);
-  height: 2em;
-  width: 3.5em;
   display: grid;
   align-content: center;
   place-items: center;
   color: var(--text-color);
+  width: 7.8em;
+  height: 5.4em;
+}
+.Secondary__bar {
+  width: 1.8em;
+  background-color: var(--other-prize-spacebar-color);
 }
