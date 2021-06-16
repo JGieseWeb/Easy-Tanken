@@ -13,7 +13,7 @@
   --first-prize-field-color: #1a3423;
   --other-prize-field-color: #341a1c;
   --first-prize-spacebar-color: #1da033;
-  --second-prize-spacebar-color: #a01d1d;
+  --other-prize-spacebar-color: #a01d1d;
 }
 body {
   margin: 0;
