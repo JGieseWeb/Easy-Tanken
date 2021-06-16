@@ -6,5 +6,10 @@ type PrizeFieldProps = {
 };
 
 export default function PrizeField({ variant }: PrizeFieldProps): JSX.Element {
-  return <div className={styles[variant]}>1.60</div>;
+  return (
+    <div className={styles[variant]}>
+      <div className={styles[`${variant}__prize`]}>1.60</div>
+      <div className={styles[`${variant}__bar`]}></div>
+    </div>
+  );
 }
