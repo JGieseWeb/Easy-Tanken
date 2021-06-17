@@ -1,0 +1,27 @@
+.infoCard {
+  background-color: var(--secondary--color);
+  color: var(--text-color);
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: column;
+}
+.tankName {
+  display: grid;
+  align-content: left;
+  padding-left: 5%;
+  font-size: 2em;
+}
+.street {
+  display: grid;
+  align-content: left;
+  padding-left: 5%;
+}
+.range {
+  display: grid;
+  justify-content: end;
+  padding-right: 15%;
+  font-size: 1.5em;
+}
+.place {
+  padding-left: 5%;
+}
