@@ -1,10 +1,10 @@
-.Primary {
+.container {
   display: grid;
   grid-auto-flow: column;
   justify-content: left;
 }
 
-.Primary__prize {
+.primary__prize {
   border: none;
   background-color: var(--first-prize-field-color);
   display: grid;
@@ -15,17 +15,12 @@
   height: 5.4em;
 }
 
-.Primary__bar {
+.primary__bar {
   width: 1.8em;
   background-color: var(--first-prize-spacebar-color);
 }
 
-.Secondary {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: left;
-}
-.Secondary__prize {
+.secondary__prize {
   border: none;
   background-color: var(--other-prize-field-color);
   display: grid;
@@ -35,7 +30,7 @@
   width: 7.8em;
   height: 5.4em;
 }
-.Secondary__bar {
+.secondary__bar {
   width: 1.8em;
   background-color: var(--other-prize-spacebar-color);
 }
