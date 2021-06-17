@@ -9,7 +9,7 @@
   display: grid;
   align-content: left;
   padding-left: 5%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .street {
   display: grid;
@@ -20,7 +20,7 @@
   display: grid;
   justify-content: end;
   padding-right: 15%;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .place {
   padding-left: 5%;

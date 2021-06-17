@@ -3,4 +3,6 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
+  width: auto;
+  height: auto;
 }
