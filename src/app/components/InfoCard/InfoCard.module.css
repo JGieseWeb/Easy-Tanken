@@ -4,6 +4,7 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-auto-flow: column;
+  width: 17em;
 }
 .tankName {
   display: grid;
@@ -15,6 +16,7 @@
   display: grid;
   align-content: left;
   padding-left: 5%;
+  font-size: 1em;
 }
 .range {
   display: grid;
