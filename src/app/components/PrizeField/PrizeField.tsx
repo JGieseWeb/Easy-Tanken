@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./PrizeField.module.css";
 
-type PrizeFieldProps = {
+export type PrizeFieldProps = {
   variant: "primary" | "secondary";
 };
 
