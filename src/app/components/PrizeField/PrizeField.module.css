@@ -2,6 +2,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: left;
+  font-size: 1.5em;
 }
 
 .primary__prize {
@@ -27,7 +28,6 @@
   place-items: center;
   color: var(--text-color);
   width: 7.8em;
-  height: 5.4em;
 }
 .secondary__bar {
   width: 1.8em;
