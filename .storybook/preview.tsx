@@ -1,3 +1,4 @@
+import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { addDecorator } from "@storybook/react";
 import "../src/app/globals.css";
