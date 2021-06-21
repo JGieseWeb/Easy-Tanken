@@ -14,7 +14,7 @@ export default function TankCard({
 }: TankCardProps): JSX.Element {
   return (
     <div className={styles.tankCard}>
-      <PrizeField variant={variant} />
+      <PrizeField variant={variant} prize={160} />
       <InfoCard
         tankName={tankName}
         street="Webstraße 12"

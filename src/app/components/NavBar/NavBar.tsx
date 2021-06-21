@@ -15,7 +15,7 @@ function NavBar(): JSX.Element {
       </div>
       <div className={styles.botNavBar}>
         <EuroButton />
-        <span className={styles.text}> Alle</span>
+        <span className={styles.text}>Alle</span>
         <KMButton />
       </div>
     </div>

@@ -17,8 +17,8 @@ export default function InfoCard({
     <div className={styles.infoCard}>
       <div className={styles.tankName}>{tankName}</div>
       <div className={styles.street}>{street}</div>
-      <div className={styles.place}>{place}</div>
-      <div className={styles.range}>{range}</div>
+      <div>{place}</div>
+      <div className={styles.range}>{range} km</div>
     </div>
   );
 }

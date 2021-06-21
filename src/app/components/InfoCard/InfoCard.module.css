@@ -4,26 +4,17 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-auto-flow: column;
-  width: 17em;
+  justify-content: space-between;
+  padding: 0.3em;
+  align-items: center;
 }
 .tankName {
-  display: grid;
-  align-content: left;
-  padding-left: 5%;
   font-size: 1.5em;
+  padding: 0.2em 0;
 }
 .street {
-  display: grid;
-  align-content: left;
-  padding-left: 5%;
   font-size: 1em;
 }
 .range {
-  display: grid;
-  justify-content: end;
-  padding-right: 15%;
   font-size: 1.2em;
-}
-.place {
-  padding-left: 5%;
 }

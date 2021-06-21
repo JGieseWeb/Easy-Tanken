@@ -1,8 +1,7 @@
 .tankCard {
   margin: 0;
   display: grid;
-  grid-auto-flow: column;
-  justify-content: center;
-  width: auto;
+  grid-template-columns: auto 1fr;
   height: auto;
+  padding-bottom: 0.1em;
 }
