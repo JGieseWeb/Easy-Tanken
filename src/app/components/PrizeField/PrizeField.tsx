@@ -15,7 +15,7 @@ export default function PrizeField({
       <div className={`${styles.prize} ${styles[`${variant}__prize`]}`}>
         {prize}
       </div>
-      <div className={`${styles.bar} ${styles[`${variant}__bar`]}`}></div>
+      <div className={`${styles.bar} ${styles[`${variant}__bar`]}`} />
     </div>
   );
 }

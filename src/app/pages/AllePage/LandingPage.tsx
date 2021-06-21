@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import TankCard from "../../components/TankCard/TankCard";
 import styles from "./AllePage.module.css";
 
-function AllePage(): JSX.Element {
+function LandingPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <header>
@@ -16,4 +16,4 @@ function AllePage(): JSX.Element {
     </div>
   );
 }
-export default AllePage;
+export default LandingPage;
