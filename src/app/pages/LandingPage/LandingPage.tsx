@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import TankCard from "../../components/TankCard/TankCard";
-import styles from "./AllePage.module.css";
+import styles from "./LandingPage.module.css";
 
 function LandingPage(): JSX.Element {
   return (
