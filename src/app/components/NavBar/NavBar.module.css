@@ -2,7 +2,6 @@
   margin: 0;
   background-color: var(--primary-color);
   display: grid;
-  grid-auto-flow: row;
 }
 .topNavBar {
   display: grid;
