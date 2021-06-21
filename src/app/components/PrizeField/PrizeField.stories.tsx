@@ -6,8 +6,8 @@ export default {
   component: PrizeField,
 };
 export const FirstPrizeField = (): JSX.Element => (
-  <PrizeField variant="primary" />
+  <PrizeField variant="primary" prize={1.61} />
 );
 export const SecondaryPrizeField = (): JSX.Element => (
-  <PrizeField variant="secondary" />
+  <PrizeField variant="secondary" prize={1.62} />
 );
