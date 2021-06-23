@@ -1,5 +1,5 @@
 import express from "express";
-import { fetchList, fetchPrize } from "./TankApi";
+import { fetchPrize, getStation } from "./TankApi";
 
 const router = express.Router();
 
@@ -14,9 +14,9 @@ router.get("/prices/:id", async (req, res, next) => {
 });
 router.get("/list/", async (_req, res, next) => {
   try {
-    const tankList = await fetchList({
-      lat: 50.935173,
-      lng: 6.953101,
+    const tankList = await getStation({
+      lat: 51.4004,
+      lng: 6.8773,
       dist: 1.2,
       rad: 10,
       type: "all",
