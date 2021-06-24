@@ -5,7 +5,7 @@ export type fetchListProps = {
   rad: number;
   type: string;
 };
-export type TankResult = {
+export type StationsResult = {
   stations: {
     id: string;
     brand: string;
@@ -20,7 +20,7 @@ export type TankResult = {
     postcode: number;
   }[];
 };
-export type All = {
+export type AllInfoStations = {
   stations: {
     id: string;
     name: string;
