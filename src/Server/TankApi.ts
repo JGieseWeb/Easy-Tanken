@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { All, fetchListProps, TankResult } from "./types";
+import { AllInfoStations, fetchListProps, StationsResult } from "./types";
 
 const { API_KEY } = process.env;
 
@@ -8,7 +8,7 @@ if (!API_KEY) {
 }
 const BASE_URL = "https://creativecommons.tankerkoenig.de/json";
 
-export async function fetchPrize(id: string): Promise<All> {
+export async function fetchPrize(id: string): Promise<AllInfoStations> {
   const response = await fetch(
     `${BASE_URL}/prices.php?ids=${id}&apikey=${API_KEY}`
   );
@@ -25,7 +25,7 @@ export async function fetchList({
   dist,
   rad,
   type,
-}: fetchListProps): Promise<All> {
+}: fetchListProps): Promise<AllInfoStations> {
   const response = await fetch(
     `${BASE_URL}/list.php?lat=${lat}&lng=${lng}&dist=${dist}&rad=${rad}&type=${type}&apikey=${API_KEY}`
   );
@@ -41,23 +41,37 @@ export async function getStation({
   dist,
   rad,
   type,
-}: fetchListProps): Promise<TankResult> {
+}: fetchListProps): Promise<StationsResult> {
   const allStation = await fetchList({ lat, lng, dist, rad, type });
 
-  const station: TankResult = {
-    stations: allStation.stations.map((station) => ({
-      id: station.id,
-      brand: station.brand,
-      street: station.street,
-      lat: station.lat,
-      lng: station.lng,
-      dist: station.dist,
-      diesel: station.diesel,
-      e5: station.e5,
-      e10: station.e10,
-      houseNumber: station.houseNumber,
-      postcode: station.postcode,
-    })),
+  const station: StationsResult = {
+    stations: allStation.stations.map(
+      ({
+        id,
+        brand,
+        street,
+        lat,
+        lng,
+        dist,
+        diesel,
+        e5,
+        e10,
+        houseNumber,
+        postcode,
+      }) => ({
+        id: id,
+        brand: brand,
+        street: street,
+        lat: lat,
+        lng: lng,
+        dist: dist,
+        diesel: diesel,
+        e5: e5,
+        e10: e10,
+        houseNumber: houseNumber,
+        postcode: postcode,
+      })
+    ),
   };
   return station;
 }
