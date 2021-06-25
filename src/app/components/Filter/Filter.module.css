@@ -1,0 +1,21 @@
+.filterBar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.filterBar__header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 0.4em;
+}
+.filterBar__filters {
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0.4em;
+  border-radius: 0.5em;
+}
+.label {
+  display: grid;
+  align-content: center;
+}
