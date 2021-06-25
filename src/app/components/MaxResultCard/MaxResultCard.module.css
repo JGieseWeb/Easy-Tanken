@@ -1,0 +1,21 @@
+.maxResultBar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.maxResultBar__header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 0.4em;
+}
+.maxResultBar__filters {
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0.4em;
+  border-radius: 0.5em;
+}
+.label {
+  display: grid;
+  align-content: center;
+}
