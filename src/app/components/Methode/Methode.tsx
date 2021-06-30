@@ -3,6 +3,7 @@ import styles from "./Methode.module.css";
 
 const locationSort = {
   AkLocation: { name: "Aktueller Standort" },
+  value: { name: "value" },
 };
 type LabeledInputProps = {
   label: string;
@@ -10,7 +11,7 @@ type LabeledInputProps = {
   value: string;
   type?: string;
   required?: boolean;
-  onChange: (value: string) => void;
+  onChange?: (value: string) => void;
 };
 
 function LocationCard({
@@ -25,7 +26,9 @@ function LocationCard({
   const [locationValue, setLocationValue] = useState<"AkLocation">(
     "AkLocation"
   );
-
+  if (!onChange) {
+    return <div>not found.</div>;
+  }
   return (
     <div className={styles.locationBar}>
       <div
