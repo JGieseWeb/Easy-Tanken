@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Filter from "../../components/Filter/Filter";
 import MaxResultCard from "../../components/MaxResultCard/MaxResultCard";
-import LocationCard from "../../components/Methode/Methode";
+import LocationCard from "../../components/LocationCard/LocationCard";
 import NavBar from "../../components/NavBar/NavBar";
 import RadiusCard from "../../components/Radius/Radius";
 import SpritCard from "../../components/Spritcard/SpritCard";
