@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./Radius.module.css";
 
 const pickRadius = {
-  five: { name: "5Km" },
-  ten: { name: "10Km" },
-  fifty: { name: "50Km" },
+  five: { name: "5Km", value: 5 },
+  ten: { name: "10Km", value: 10 },
+  fifty: { name: "50Km", value: 50 },
 };
 
 function RadiusCard(): JSX.Element {

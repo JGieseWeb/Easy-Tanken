@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./MaxResultCard.module.css";
 
 const pickMax = {
-  max25: { name: "max.25" },
-  max50: { name: "max.50" },
+  max25: { name: "max.25", value: 25 },
+  max50: { name: "max.50", value: 50 },
   allResults: { name: "Alle Ergebnisse" },
 };
 
