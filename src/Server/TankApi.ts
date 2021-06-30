@@ -44,34 +44,5 @@ export async function getStation({
 }: fetchListProps): Promise<StationsResult> {
   const allStation = await fetchList({ lat, lng, dist, rad, type });
 
-  const station: StationsResult = {
-    stations: allStation.stations.map(
-      ({
-        id,
-        brand,
-        street,
-        lat,
-        lng,
-        dist,
-        diesel,
-        e5,
-        e10,
-        houseNumber,
-        postcode,
-      }) => ({
-        id: id,
-        brand: brand,
-        street: street,
-        lat: lat,
-        lng: lng,
-        dist: dist,
-        diesel: diesel,
-        e5: e5,
-        e10: e10,
-        houseNumber: houseNumber,
-        postcode: postcode,
-      })
-    ),
-  };
-  return station;
+  return { stations: allStation.stations };
 }
