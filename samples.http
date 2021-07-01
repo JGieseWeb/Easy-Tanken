@@ -2,5 +2,9 @@
 @baseUrl = http://localhost:{{port}}
 ###
 GET {{baseUrl}}/api/prices/24a381e3-0d72-416d-bfd8-b2f65f6e5802
+
 ###
-GET {{baseUrl}}/api/list/
+GET {{baseUrl}}/api/list?lat=51.4004&lng=6.8773
+
+### Home
+GET {{baseUrl}}/api/list?lat=51.4654208000000044&lng=6.773145599999999
