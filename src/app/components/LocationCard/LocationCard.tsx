@@ -7,7 +7,7 @@ type LabeledInputProps = {
   value: string;
   type?: string;
   required?: boolean;
-  onChange?: (value: string) => void;
+  onChange: (value: string) => void;
 };
 
 function LocationCard({
@@ -19,9 +19,7 @@ function LocationCard({
   onChange,
 }: LabeledInputProps): JSX.Element {
   const [open, setOpen] = useState(false);
-  if (!onChange) {
-    return <div>not found.</div>;
-  }
+
   return (
     <div className={styles.locationBar}>
       <div

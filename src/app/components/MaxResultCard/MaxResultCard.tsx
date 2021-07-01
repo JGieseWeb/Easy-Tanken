@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import styles from "./MaxResultCard.module.css";
 
 const pickMax = {
-  max25: { name: "max.25", value: 25 },
-  max50: { name: "max.50", value: 50 },
-  allResults: { name: "Alle Ergebnisse" },
+  max25: "max.25",
+  max50: "max.50",
+  allResults: "Alle Ergebnisse",
 };
-
-function MaxResultCard(): JSX.Element {
+type MaxResultCardProps = {
+  value: "max25" | "max50" | "allResults";
+  onChange: (value: "max25" | "max50" | "allResults") => void;
+};
+function MaxResultCard({ value, onChange }: MaxResultCardProps): JSX.Element {
   const [open, setOpen] = useState(false);
-  const [maxResultValue, setMaxResultValue] = useState<
-    "max25" | "max50" | "allResults"
-  >("max25");
 
   return (
     <div className={styles.maxResultBar}>
@@ -20,7 +20,7 @@ function MaxResultCard(): JSX.Element {
         onClick={() => setOpen(!open)}
       >
         <p>Anzahl Ergebnisse</p>
-        <label className={styles.label}>{pickMax[maxResultValue].name}</label>
+        <label className={styles.label}>{pickMax[value]}</label>
       </div>
       {open && (
         <div className={styles.maxResultBar__filters}>
@@ -30,7 +30,7 @@ function MaxResultCard(): JSX.Element {
             id="max25"
             name="filter"
             value="max25"
-            onChange={() => setMaxResultValue("max25")}
+            onChange={() => onChange("max25")}
           />
           <label htmlFor="max50">max.50</label>
           <input
@@ -38,7 +38,7 @@ function MaxResultCard(): JSX.Element {
             id="max50"
             name="filter"
             value="max50"
-            onChange={() => setMaxResultValue("max50")}
+            onChange={() => onChange("max50")}
           />
           <label htmlFor="allResults">Alle Ergebnisse</label>
           <input
@@ -46,7 +46,7 @@ function MaxResultCard(): JSX.Element {
             id="allResults"
             name="filter"
             value="allResults"
-            onChange={() => setMaxResultValue("allResults")}
+            onChange={() => onChange("allResults")}
           />
         </div>
       )}
