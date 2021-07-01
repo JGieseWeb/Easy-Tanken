@@ -7,4 +7,6 @@ export default {
   component: Filter,
 };
 
-export const FilterBar = (): JSX.Element => <Filter />;
+export const FilterBar = (): JSX.Element => (
+  <Filter value="all" onChange={console.log} />
+);

@@ -7,4 +7,6 @@ export default {
   component: MaxResultCard,
 };
 
-export const MaxResult = (): JSX.Element => <MaxResultCard />;
+export const MaxResult = (): JSX.Element => (
+  <MaxResultCard value="max25" onChange={console.log} />
+);
