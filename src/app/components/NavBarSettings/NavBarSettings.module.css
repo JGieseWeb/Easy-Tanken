@@ -1,0 +1,31 @@
+.navBar {
+  margin: 0;
+  background-color: var(--primary-color);
+  display: grid;
+}
+.topNavBar {
+  min-height: 3.4em;
+  display: grid;
+  grid-auto-flow: column;
+}
+.topNavBar :last-child {
+  justify-self: end;
+}
+.topNavBar :first-child {
+  grid-area: 1/1/1/2;
+}
+.topNavBar :nth-child(2) {
+  place-self: center;
+}
+.botNavBar {
+  min-height: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.botNavBar :last-child {
+  justify-self: end;
+}
+.botNavBar :first-child {
+  margin-right: 20%;
+}
