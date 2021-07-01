@@ -27,8 +27,12 @@ function LandingPage(): JSX.Element {
       <main className={styles.main}>
         {stations.map((station, index) => (
           <TankCard
+            dist={station.dist}
             key={station.id}
-            tankName={station.name}
+            brand={station.brand}
+            street={station.street}
+            place={station.place}
+            price={station.diesel}
             variant={index === 0 ? "primary" : "secondary"}
           />
         ))}
