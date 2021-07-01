@@ -10,6 +10,7 @@ export type Station = {
   name: string;
   brand: string;
   street: string;
+  place: string;
   lat: number;
   lng: number;
   dist: number;
