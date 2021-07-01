@@ -2,30 +2,39 @@ import React, { useState } from "react";
 import Filter from "../../components/Filter/Filter";
 import MaxResultCard from "../../components/MaxResultCard/MaxResultCard";
 import LocationCard from "../../components/LocationCard/LocationCard";
-import NavBar from "../../components/NavBar/NavBar";
 import RadiusCard from "../../components/Radius/Radius";
 import SpritCard from "../../components/Spritcard/SpritCard";
 import styles from "./SettingsPage.module.css";
+import NavBarSettings from "../../components/NavBarSettings/NavBarSettings";
 
 function SettingsPage(): JSX.Element {
-  const [plz, setPlz] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [filterValue, setFilterValue] = useState<"all" | "favorites">("all");
+  const [spritValue, setSpritValue] = useState<"e5" | "e10" | "diesel">("e5");
+  const [radiusValue, setRadiusValue] = useState<"five" | "ten" | "fifty">(
+    "five"
+  );
+  const [MaxresultValue, setMaxResultValue] = useState<
+    "max25" | "max50" | "allResults"
+  >("max25");
+
   return (
     <div className={styles.container}>
       <header>
-        <NavBar isLabelHidden />
+        <NavBarSettings isLabelHidden />
       </header>
       <main>
-        <Filter />
+        <Filter value={filterValue} onChange={setFilterValue} />
         <LocationCard
           label="Umkreissuche um Plz"
           placeholder="Plz"
-          value={plz}
+          value={postcode}
           type="number"
-          onChange={setPlz}
+          onChange={setPostcode}
         />
-        <RadiusCard />
-        <SpritCard />
-        <MaxResultCard />
+        <RadiusCard value={radiusValue} onChange={setRadiusValue} />
+        <SpritCard value={spritValue} onChange={setSpritValue} />
+        <MaxResultCard value={MaxresultValue} onChange={setMaxResultValue} />
       </main>
     </div>
   );
