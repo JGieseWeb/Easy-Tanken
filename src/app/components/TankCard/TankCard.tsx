@@ -1,26 +1,29 @@
 import React from "react";
 import InfoCard from "../InfoCard/InfoCard";
-import PrizeField from "../PrizeField/PrizeField";
+import PriceField from "../PriceField/PriceField";
 import styles from "./TankCard.module.css";
 
 type TankCardProps = {
-  tankName: string;
+  brand: string;
   variant: "primary" | "secondary";
+  dist: number;
+  street: string;
+  place: string;
+  price: number;
 };
 
 export default function TankCard({
-  tankName,
+  brand,
   variant,
+  dist,
+  street,
+  place,
+  price,
 }: TankCardProps): JSX.Element {
   return (
     <div className={styles.tankCard}>
-      <PrizeField variant={variant} prize={160} />
-      <InfoCard
-        tankName={tankName}
-        street="Webstraße 12"
-        place="Mülheim a. d Ruhr 45481"
-        range="2,1"
-      />
+      <PriceField variant={variant} price={price} />
+      <InfoCard brand={brand} street={street} place={place} dist={dist} />
     </div>
   );
 }
