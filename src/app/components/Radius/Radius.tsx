@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import styles from "./Radius.module.css";
 
 const radiusLabels = {
-  five: "5Km",
-  ten: "10Km",
-  fifty: "50Km",
+  5: "5Km",
+  10: "10Km",
+  50: "50Km",
 };
 
 type RadiusCardProps = {
-  value: "five" | "ten" | "fifty";
-  onChange: (value: "five" | "ten" | "fifty") => void;
+  value: 5 | 10 | 50;
+  onChange: (value: 5 | 10 | 50) => void;
 };
 
 function RadiusCard({ value, onChange }: RadiusCardProps): JSX.Element {
@@ -28,24 +28,24 @@ function RadiusCard({ value, onChange }: RadiusCardProps): JSX.Element {
             type="radio"
             id="5km"
             name="filter"
-            value="five"
-            onChange={() => onChange("five")}
+            value={5}
+            onChange={() => onChange(5)}
           />
           <label htmlFor="10Km">10Km</label>
           <input
             type="radio"
             id="10Km"
             name="filter"
-            value="ten"
-            onChange={() => onChange("ten")}
+            value={10}
+            onChange={() => onChange(10)}
           />
           <label htmlFor="50Km">50Km</label>
           <input
             type="radio"
             id="50Km"
             name="filter"
-            value="fifty"
-            onChange={() => onChange("fifty")}
+            value={50}
+            onChange={() => onChange(50)}
           />
         </div>
       )}

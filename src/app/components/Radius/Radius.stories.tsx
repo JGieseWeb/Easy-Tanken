@@ -8,5 +8,5 @@ export default {
 };
 
 export const Radius = (): JSX.Element => (
-  <RadiusCard value="fifty" onChange={console.log} />
+  <RadiusCard value={10} onChange={console.log} />
 );

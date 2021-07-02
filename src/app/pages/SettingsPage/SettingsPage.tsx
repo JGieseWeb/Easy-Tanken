@@ -11,9 +11,7 @@ function SettingsPage(): JSX.Element {
   const [postcode, setPostcode] = useState("");
   const [filterValue, setFilterValue] = useState<"all" | "favorites">("all");
   const [spritValue, setSpritValue] = useState<"e5" | "e10" | "diesel">("e5");
-  const [radiusValue, setRadiusValue] = useState<"five" | "ten" | "fifty">(
-    "five"
-  );
+  const [radiusValue, setRadiusValue] = useState<5 | 10 | 50>(5);
   const [MaxresultValue, setMaxResultValue] = useState<
     "max25" | "max50" | "allResults"
   >("max25");
