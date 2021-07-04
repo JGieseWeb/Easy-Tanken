@@ -1,0 +1,8 @@
+.container {
+  background-color: var(--background-color);
+  height: 100vh;
+  overflow: hidden;
+}
+.MapImg {
+  overflow: hidden;
+}

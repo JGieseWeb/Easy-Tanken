@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import MapPage from "./pages/MapPage/MapPage";
 import SettingsPage from "./pages/SettingsPage/SettingsPage";
 
 function App(): JSX.Element {
@@ -13,6 +14,9 @@ function App(): JSX.Element {
           </Route>
           <Route exact path="/">
             <LandingPage />
+          </Route>
+          <Route path="/map">
+            <MapPage />
           </Route>
         </main>
       </Switch>
