@@ -3,7 +3,7 @@
   grid-auto-flow: column;
   font-size: 1.5em;
 }
-.prize {
+.price {
   border: none;
   background-color: var(--first-prize-field-color);
   display: grid;
@@ -15,7 +15,7 @@
 .bar {
   width: 0.8em;
 }
-.primary__prize {
+.primary__price {
   background-color: var(--first-prize-field-color);
 }
 
@@ -23,7 +23,7 @@
   background-color: var(--first-prize-spacebar-color);
 }
 
-.secondary__prize {
+.secondary__price {
   background-color: var(--other-prize-field-color);
 }
 .secondary__bar {

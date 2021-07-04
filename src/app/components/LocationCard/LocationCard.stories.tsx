@@ -1,6 +1,6 @@
 import React from "react";
 
-import LocationCard from "./Methode";
+import LocationCard from "./LocationCard";
 
 export default {
   title: "Component/LocationCard",

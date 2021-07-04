@@ -7,12 +7,12 @@ export default {
 };
 export const Aral = (): JSX.Element => (
   <InfoCard
-    tankName="Aral"
+    brand="Aral"
     street="Webstraße 12"
     place="Mülheim a. d Ruhr 45481"
-    range="2,1"
+    dist={2.1}
   />
 );
 export const Esso = (): JSX.Element => (
-  <InfoCard tankName="Esso" street="Webstraße 13" place="Köln" range="1,1" />
+  <InfoCard brand="Esso" street="Webstraße 13" place="Köln" dist={2.5} />
 );

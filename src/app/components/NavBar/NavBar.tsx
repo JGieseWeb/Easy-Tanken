@@ -6,7 +6,11 @@ import KMButton from "../KmButton/KmButton";
 import NavBarLink from "../NavBarLink/NavBarLink";
 import styles from "./NavBar.module.css";
 
-function NavBar(): JSX.Element {
+export type NavBarProps = {
+  isLabelHidden?: boolean;
+};
+
+function NavBar({ isLabelHidden }: NavBarProps): JSX.Element {
   return (
     <div className={styles.navBar}>
       <div className={styles.topNavBar}>
@@ -14,9 +18,13 @@ function NavBar(): JSX.Element {
         <NavBarLink icon={<CompassIcon />} link="/map" />
       </div>
       <div className={styles.botNavBar}>
-        <EuroButton />
-        <span className={styles.text}>Alle</span>
-        <KMButton />
+        {!isLabelHidden && (
+          <>
+            <EuroButton />
+            <span className={styles.text}>Alle</span>
+            <KMButton />
+          </>
+        )}
       </div>
     </div>
   );

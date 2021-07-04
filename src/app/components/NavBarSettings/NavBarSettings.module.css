@@ -4,15 +4,18 @@
   display: grid;
 }
 .topNavBar {
+  min-height: 3.4em;
   display: grid;
   grid-auto-flow: column;
 }
 .topNavBar :last-child {
-  grid-area: 1/1/1/3;
-  place-self: center;
+  justify-self: end;
 }
 .topNavBar :first-child {
   grid-area: 1/1/1/2;
+}
+.topNavBar :nth-child(2) {
+  place-self: center;
 }
 .botNavBar {
   min-height: 2em;
@@ -25,8 +28,4 @@
 }
 .botNavBar :first-child {
   margin-right: 20%;
-}
-.text {
-  color: antiquewhite;
-  font-size: 1.5em;
 }

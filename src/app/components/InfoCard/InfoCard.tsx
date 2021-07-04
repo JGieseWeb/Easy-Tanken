@@ -2,23 +2,23 @@ import React from "react";
 import styles from "./InfoCard.module.css";
 
 export type InfoCardProps = {
-  tankName: string;
+  brand: string;
   street: string;
   place: string;
-  range: string;
+  dist: number;
 };
 export default function InfoCard({
-  tankName,
+  brand,
   street,
   place,
-  range,
+  dist,
 }: InfoCardProps): JSX.Element {
   return (
     <div className={styles.infoCard}>
-      <div className={styles.tankName}>{tankName}</div>
+      <div className={styles.tankName}>{brand}</div>
       <div className={styles.street}>{street}</div>
-      <div>{place}</div>
-      <div className={styles.range}>{range} km</div>
+      <div className={styles.place}>{place}</div>
+      <div className={styles.range}>{dist} km</div>
     </div>
   );
 }

@@ -7,4 +7,6 @@ export default {
   component: RadiusCard,
 };
 
-export const Radius = (): JSX.Element => <RadiusCard />;
+export const Radius = (): JSX.Element => (
+  <RadiusCard value={10} onChange={console.log} />
+);

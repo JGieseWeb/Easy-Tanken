@@ -6,8 +6,22 @@ export default {
   component: TankCard,
 };
 export const AralCheap = (): JSX.Element => (
-  <TankCard tankName="Aral" variant="primary" />
+  <TankCard
+    brand="Aral"
+    variant="primary"
+    dist={2}
+    street="Mülheimerstr.123"
+    place="Mülheim"
+    price={1.56}
+  />
 );
 export const EssoExpensive = (): JSX.Element => (
-  <TankCard tankName="Esso" variant="secondary" />
+  <TankCard
+    brand="Esso"
+    variant="secondary"
+    dist={2.3}
+    street="Mülheimerstr.123"
+    place="Mülheim"
+    price={1.58}
+  />
 );

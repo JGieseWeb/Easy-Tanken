@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import styles from "./Methode.module.css";
+import styles from "./LocationCard.module.css";
 
-const locationSort = {
-  AkLocation: { name: "Aktueller Standort" },
-};
 type LabeledInputProps = {
   label: string;
   placeholder: string;
@@ -22,9 +19,6 @@ function LocationCard({
   onChange,
 }: LabeledInputProps): JSX.Element {
   const [open, setOpen] = useState(false);
-  const [locationValue, setLocationValue] = useState<"AkLocation">(
-    "AkLocation"
-  );
 
   return (
     <div className={styles.locationBar}>
@@ -34,7 +28,7 @@ function LocationCard({
       >
         <p>Suchmethode</p>
         <label className={styles.label}>
-          {locationSort[locationValue].name}
+          {value ? value : "Aktueller Standort"}
         </label>
       </div>
       {open && (
@@ -45,7 +39,8 @@ function LocationCard({
             id="AkLocation"
             name="filter"
             value="AkLocation"
-            onChange={() => setLocationValue("AkLocation")}
+            checked={!value}
+            onChange={() => onChange("")}
           />
           <label className={styles.container__label}>{label}</label>
           <input

@@ -7,4 +7,6 @@ export default {
   component: SpritCard,
 };
 
-export const SpritSort = (): JSX.Element => <SpritCard />;
+export const SpritSort = (): JSX.Element => (
+  <SpritCard value="e5" onChange={console.log} />
+);

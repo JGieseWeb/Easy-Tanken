@@ -6,3 +6,5 @@ export default {
   component: NavBar,
 };
 export const NavBarElement = (): JSX.Element => <NavBar />;
+
+export const LabelsHidden = (): JSX.Element => <NavBar isLabelHidden />;

@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { AllInfoStations, fetchListProps, StationsResult } from "./types";
+import { AllInfoStations, fetchListProps, Station } from "./types";
 
 const { API_KEY } = process.env;
 
@@ -20,11 +20,11 @@ export async function fetchPrize(id: string): Promise<AllInfoStations> {
 }
 
 export async function fetchList({
-  lat,
-  lng,
   dist,
   rad,
   type,
+  lat,
+  lng,
 }: fetchListProps): Promise<AllInfoStations> {
   const response = await fetch(
     `${BASE_URL}/list.php?lat=${lat}&lng=${lng}&dist=${dist}&rad=${rad}&type=${type}&apikey=${API_KEY}`
@@ -35,43 +35,8 @@ export async function fetchList({
   const resultOfList = await response.json();
   return resultOfList;
 }
-export async function getStation({
-  lat,
-  lng,
-  dist,
-  rad,
-  type,
-}: fetchListProps): Promise<StationsResult> {
-  const allStation = await fetchList({ lat, lng, dist, rad, type });
+export async function getStations(query: fetchListProps): Promise<Station[]> {
+  const allStation = await fetchList(query);
 
-  const station: StationsResult = {
-    stations: allStation.stations.map(
-      ({
-        id,
-        brand,
-        street,
-        lat,
-        lng,
-        dist,
-        diesel,
-        e5,
-        e10,
-        houseNumber,
-        postcode,
-      }) => ({
-        id: id,
-        brand: brand,
-        street: street,
-        lat: lat,
-        lng: lng,
-        dist: dist,
-        diesel: diesel,
-        e5: e5,
-        e10: e10,
-        houseNumber: houseNumber,
-        postcode: postcode,
-      })
-    ),
-  };
-  return station;
+  return allStation.stations;
 }
