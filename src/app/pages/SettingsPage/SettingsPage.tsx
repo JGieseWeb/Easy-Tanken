@@ -19,7 +19,10 @@ function SettingsPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <header>
-        <NavBarSettings isLabelHidden />
+        <NavBarSettings
+          isLabelHidden
+          query={`rad=${radiusValue}&type=${spritValue}`}
+        />
       </header>
       <main>
         <Filter value={filterValue} onChange={setFilterValue} />

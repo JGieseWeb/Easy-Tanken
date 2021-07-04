@@ -8,9 +8,10 @@ import styles from "./NavBarSettings.module.css";
 
 export type NavBarProps = {
   isLabelHidden?: boolean;
+  query?: string;
 };
 
-function NavBarSettings({ isLabelHidden }: NavBarProps): JSX.Element {
+function NavBarSettings({ isLabelHidden, query }: NavBarProps): JSX.Element {
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
 
@@ -33,7 +34,7 @@ function NavBarSettings({ isLabelHidden }: NavBarProps): JSX.Element {
         )}
         <NavBarLink
           icon={<BurgerMenuIcon />}
-          link={`/?lat=${lat}&lng=${lng}`}
+          link={`/?lat=${lat}&lng=${lng}&${query}`}
         />
       </div>
       <div className={styles.botNavBar}>

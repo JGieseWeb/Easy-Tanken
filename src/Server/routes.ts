@@ -17,7 +17,7 @@ router.get("/list/", async (req, res, next) => {
   try {
     const lat = +(req.query.lat || 0);
     const lng = +(req.query.lng || 0);
-    const rad = 10;
+    const rad = +(req.query.rad || 10);
 
     const tankList = await getStations({
       dist: 1.2,
